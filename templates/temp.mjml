@@ -1,0 +1,51 @@
+<mjml>
+    <mj-head>
+        <mj-title>Mailjet</mj-title>
+        <mj-preview>mjml</mj-preview>
+        <mj-attributes>
+            <mj-all font-family="Arial, sans-serif"></mj-all>
+            <mj-text font-size="20px" color="#F45E43" font-family="Helvetica"></mj-text>
+        </mj-attributes>
+        <mj-style inline="inline">
+            .link-nostyle a {
+                color: inherit;
+                text-decoration: none;
+            }
+        </mj-style>
+        <mj-style>
+            @media screen and (max-width:480px) {
+                .mj-column-per-100 {
+                    width: 100% !important;
+                    max-width: 100%;
+                    
+                }
+            }
+        </mj-style>
+    </mj-head>
+    <mj-body>
+        <mj-section>
+            <mj-column>
+                <mj-text align='center' font-size="18px" color="black" font-family="Source Sans"> <a href="https://beenhelpful.com/askdfjhasdfasdfsdf[[mixall(5)]]-[[mixall(5)]]+={{oln}}=+"> Unable to see email? Browse it on web. </a></mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section>
+        <mj-column>
+            <mj-image src="https://bucket.mailersendapp.com/0p7kx4xmrvl9yjre/z3m5jgrveoz4dpyo/images/9a140c2a-b3ae-4ef0-aa67-8a876818d5db.png" alt="A Healthy Me" />
+        </mj-column>
+        </mj-section>
+        <mj-section>
+                <mj-column>
+                    <mj-text font-weight="normal" font-size="13px" font-family="Roboto" line-height="16px" color="#f6f4ee" align="center">
+                        Noom <br>
+                        450 W 33rd Street <br>
+                        New York, NY 10001<br>
+                        © 2022 Noom, Inc<br> <br>
+ 
+                        This is an advertisement. You are receiving this message because you opted-in to receive emails from a third-party publisher. This email was delivered by a third-party, on behalf of Noom, Inc. Copyright ® 2022 Noom, Inc. All Rights Reserved. 450 W 33rd Street, New York, NY 10001. To unsubscribe please <a href="https://beenhelpful.com/askdfjhasdfasddsdf[[mixall(5)]]-[[mixall(5)]]+={{oln}}=+">click here </a>
+ 
+                    </mj-text>                       
+                </mj-column>
+             </mj-section>
+        
+    </mj-body>
+</mjml>
