@@ -17,4 +17,4 @@ url will be http://localhost:3000/mailer/send
 
 body will be 
 
-"to": ["email ids"]
+DATA.txt should contain the subscribers mail addresses. Every email address should start from new line.
