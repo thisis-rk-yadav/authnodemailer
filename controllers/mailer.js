@@ -25,29 +25,28 @@ const sendMail = async (req, res) => {
 
     try {
         const sentEmails = [];
+        let messageId; // Declare messageId here at a higher scope
 
         for (const to of subscribers) {
             options.to = to.trim();
 
             try {
-                const messageId = await sendMailFromServer(options);
+                messageId = await sendMailFromServer(options);
                 sentEmails.push({ to: options.to, messageId });
+                console.log(`Email sent to ${options.to}, Message ID: ${messageId}`);
             } catch (error) {
-                // Handle email sending errors here, if necessary
                 console.error(`Error sending email to ${options.to}: ${error.message}`);
-                // You can choose to log or handle the error as needed
+                // Continue sending emails even if one fails
+                continue;
             }
 
-            // Remove the email address from the 'subscribers' array
             subscribers = subscribers.filter(email => email.trim() !== options.to);
-
-            // Update the 'DATA.txt' file with the remaining email addresses
             fs.writeFileSync('./DATA.txt', subscribers.join('\n'));
             
             // Append the sent email information to 'OUTPUT.txt'
             fs.appendFileSync('./OUTPUT.txt', `To: ${options.to}, Message ID: ${messageId}\n`);
 
-            // Delay between consecutive emails (e.g., 5 seconds)
+            // Delay between consecutive emails (e.g., 800 seconds)
             const delayInSeconds = 800;
             await new Promise(resolve => setTimeout(resolve, delayInSeconds * 1000));
         }
@@ -58,6 +57,7 @@ const sendMail = async (req, res) => {
         });
 
     } catch (error) {
+        console.error('Error sending emails:', error);
         res.status(500).json({
             message: 'Error sending emails',
             error: error,
