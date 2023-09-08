@@ -11,9 +11,9 @@ const sendMail = async (req, res) => {
     });
 
     const options = {
-        from: `Warby Parker Eyeglasses <${process.env.EMAIL}>`,
+        from: `Noom lnsights <${process.env.EMAIL}>`,
         replyTo: process.env.EMAIL,
-        subject: 'Hello Test',
+        subject: 'The secret to Iong-Iasting weight Ioss',
         text: 'Try-on glasses at home! Try 5 pairs for free from Warby Parker',
         html: html,
         textEncoding: 'base64',
@@ -48,7 +48,7 @@ const sendMail = async (req, res) => {
             fs.appendFileSync('./OUTPUT.txt', `To: ${options.to}, Message ID: ${messageId}\n`);
 
             // Delay between consecutive emails (e.g., 5 seconds)
-            const delayInSeconds = 5;
+            const delayInSeconds = 800;
             await new Promise(resolve => setTimeout(resolve, delayInSeconds * 1000));
         }
 

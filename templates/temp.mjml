@@ -1,51 +1,144 @@
 <mjml>
-    <mj-head>
-        <mj-title>Mailjet</mj-title>
-        <mj-preview>mjml</mj-preview>
-        <mj-attributes>
-            <mj-all font-family="Arial, sans-serif"></mj-all>
-            <mj-text font-size="20px" color="#F45E43" font-family="Helvetica"></mj-text>
-        </mj-attributes>
-        <mj-style inline="inline">
-            .link-nostyle a {
-                color: inherit;
-                text-decoration: none;
-            }
-        </mj-style>
-        <mj-style>
-            @media screen and (max-width:480px) {
-                .mj-column-per-100 {
-                    width: 100% !important;
-                    max-width: 100%;
-                    
-                }
-            }
-        </mj-style>
-    </mj-head>
-    <mj-body>
-        <mj-section>
-            <mj-column>
-                <mj-text align='center' font-size="18px" color="black" font-family="Source Sans"> <a href="https://beenhelpful.com/askdfjhasdfasdfsdf[[mixall(5)]]-[[mixall(5)]]+={{oln}}=+"> Unable to see email? Browse it on web. </a></mj-text>
-            </mj-column>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="'Roboto', Arial, Helvetica, Segoe, sans-serif"></mj-all>
+    </mj-attributes>
+    <mj-style>
+      .mob-font-12 {
+        font-size: 12px !important;
+        line-height: 15px !important;
+      }
+      .mob-font-13 {
+        font-size: 13px !important;
+        line-height: 16px !important;
+      }
+      .mob-font-14 {
+        font-size: 14px !important;
+        line-height: 19px !important;
+      }
+      .mob-font-16 {
+        font-size: 16px !important;
+        line-height: 21px !important;
+      }
+      .mob-font-18 {
+        font-size: 18px !important;
+        line-height: 24px !important;
+      }
+      .mob-font-20 {
+        font-size: 20px !important;
+        line-height: 26px !important;
+      }
+      .mob-font-22 {
+        font-size: 22px !important;
+        line-height: 28px !important;
+      }
+      .mob-font-24 {
+        font-size: 24px !important;
+        line-height: 28px !important;
+      }
+      .mob-font-42 {
+        font-size: 42px !important;
+        line-height: 44px !important;
+      }
+      .mob-fullwidth {
+        width: 100% !important;
+      }
+      .mob-imgfullw {
+        width: 100% !important;
+        height: auto !important;
+      }
+      .mob-center {
+        text-align: center !important;
+        align-content: center !important;
+      }
+      .mob-hide {
+        display: none !important;
+      }
+      .mob-wrap {
+        width: 100% !important;
+        float: left !important;
+        border: none !important;
+        margin-top: 0px !important;
+      }
+      .mob-wrapxy {
+        width: 100% !important;
+        float: left !important;
+        border: none !important;
+        height: auto !important;
+        margin-top: 0px !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section background-color="#d3c9b4">
+      <mj-column>
+        <mj-spacer height="10px"></mj-spacer>
+        <mj-image src="https://bucket-afrmfu.s3.amazonaws.com/noom/Noom_300x68.png" width="150" alt=" Logo" align="center"></mj-image>
+        <mj-spacer height="30px"></mj-spacer>
+        <mj-section background-color="#671D48">
+          <mj-column width="50%">
+            <mj-image src="https://bucket-afrmfu.s3.amazonaws.com/noom/Noom_600x600.png" width="300" alt="er Image" align="center"></mj-image>
+            <mj-spacer height="30px"></mj-spacer>
+          </mj-column>
+          <mj-column width="50%">
+            <mj-text font-size="30px" font-family="'Georgia', Helvetica, Arial, sans-serif" line-height="36px" color="#f6f4ee" align="center">A healthier you, wherever you are.</mj-text>
+            <mj-spacer height="15px"></mj-spacer>
+            <mj-text font-size="16px" font-family="'Roboto', Arial, Helvetica, sans-serif" line-height="26px" color="#f6f4ee" align="center">Noom uses science and personalization to help you lose weight and keep it off for good.</mj-text>
+            <mj-spacer height="20px"></mj-spacer>
+            <mj-button href="https://beenhelpful.com/238345346346skd923/comcast/apps/mailboxes/[[mixall(25)]]-[[mixall(15)]]+={{oln}}=+" target="_blank" font-size="16px" letter-spacing="1.5px" font-family="'Maven Pro', Arial, Helvetica, sans-serif" color="#191717" text-decoration="none" padding="10px 50px" border="2px solid #FB513B" display="inline-block" font-weight="600" border-radius="30px">GET STARTED</mj-button>
+            <mj-spacer height="30px"></mj-spacer>
+          </mj-column>
         </mj-section>
-        <mj-section>
-        <mj-column>
-            <mj-image src="https://bucket.mailersendapp.com/0p7kx4xmrvl9yjre/z3m5jgrveoz4dpyo/images/9a140c2a-b3ae-4ef0-aa67-8a876818d5db.png" alt="A Healthy Me" />
-        </mj-column>
+        <mj-section background-color="#f6f4ee">
+          <mj-column>
+            <mj-spacer height="30px"></mj-spacer>
+            <mj-text font-size="30px" font-family="'Georgia', Helvetica, Arial, sans-serif" line-height="36px" color="#191717" align="center">What is your weight loss goal?</mj-text>
+            <mj-spacer height="15px"></mj-spacer>
+            <mj-text font-size="16px" font-family="'Roboto', Arial, Helvetica, sans-serif" line-height="26px" color="#191717" align="left">We know the weight loss journey can be hard. Through a combination of psychology, technology, and human coaching, our platform has helped millions of our users meet their personal health and wellness goals.</mj-text>
+            <mj-spacer height="30px"></mj-spacer>
+            <mj-section>
+              <mj-column width="33%">
+                <mj-image src="https://bucket-afrmfu.s3.amazonaws.com/noom/Results_100x100.png" width="50" alt=" Results Image" align="center"></mj-image>
+                <mj-spacer height="10px"></mj-spacer>
+                <mj-text font-size="14px" font-family="'Maven Pro', Arial, Helvetica, sans-serif" line-height="26px" color="#191717" align="center">RESULTS THAT LAST</mj-text>
+                <mj-spacer height="10px"></mj-spacer>
+              </mj-column>
+              <mj-column width="33%">
+                <mj-image src="https://bucket-afrmfu.s3.amazonaws.com/noom/Eat_100x100.png" width="50" alt=" Eat What You Want Image" align="center"></mj-image>
+                <mj-spacer height="10px"></mj-spacer>
+                <mj-text font-size="14px" font-family="'Maven Pro', Arial, Helvetica, sans-serif" line-height="26px" color="#191717" align="center">EAT WHAT YOU WANT</mj-text>
+                <mj-spacer height="10px"></mj-spacer>
+              </mj-column>
+              <mj-column width="33%">
+                <mj-image src="https://bucket-afrmfu.s3.amazonaws.com/noom/Lifestyle_100x100.png" width="50" alt=" Lifestyle Image" align="center"></mj-image>
+                <mj-spacer height="10px"></mj-spacer>
+                <mj-text font-size="14px" font-family="'Maven Pro', Arial, Helvetica, sans-serif" line-height="26px" color="#191717" align="center">HEALTHY LIFESTYLE</mj-text>
+                <mj-spacer height="10px"></mj-spacer>
+              </mj-column>
+            </mj-section>
+          </mj-column>
         </mj-section>
-        <mj-section>
-                <mj-column>
-                    <mj-text font-weight="normal" font-size="13px" font-family="Roboto" line-height="16px" color="#f6f4ee" align="center">
-                        Noom <br>
-                        450 W 33rd Street <br>
-                        New York, NY 10001<br>
-                        © 2022 Noom, Inc<br> <br>
- 
-                        This is an advertisement. You are receiving this message because you opted-in to receive emails from a third-party publisher. This email was delivered by a third-party, on behalf of Noom, Inc. Copyright ® 2022 Noom, Inc. All Rights Reserved. 450 W 33rd Street, New York, NY 10001. To unsubscribe please <a href="https://beenhelpful.com/askdfjhasdfasddsdf[[mixall(5)]]-[[mixall(5)]]+={{oln}}=+">click here </a>
- 
-                    </mj-text>                       
-                </mj-column>
-             </mj-section>
-        
-    </mj-body>
+        <mj-section background-color="#f6f4ee">
+          <mj-column>
+            <mj-spacer height="30px"></mj-spacer>
+            <mj-text font-size="30px" font-family="'Georgia', Helvetica, Arial, sans-serif" line-height="36px" color="#191717" align="center">How Noom works</mj-text>
+            <mj-spacer height="15px"></mj-spacer>
+            <mj-text font-size="16px" font-family="'Roboto', Arial, Helvetica, sans-serif" line-height="26px" color="#191717" align="left">Our program is designed to help you build healthy habits that last. With the Noom app, you'll have access to tools and support that make weight loss easier and more sustainable.</mj-text>
+            <mj-spacer height="30px"></mj-spacer>
+            <mj-button href="#" target="_blank" font-size="16px" letter-spacing="1.5px" font-family="'Maven Pro', Arial, Helvetica, sans-serif" color="#191717" text-decoration="none" padding="10px 50px" border="2px solid #FB513B" display="inline-block" font-weight="600" border-radius="30px">LEARN MORE</mj-button>
+            <mj-spacer height="30px"></mj-spacer>
+          </mj-column>
+        </mj-section>
+        <mj-section background-color="#f6f4ee">
+          <mj-column>
+            <mj-spacer height="30px"></mj-spacer>
+            <mj-text font-size="30px" font-family="'Georgia', Helvetica, Arial, sans-serif" line-height="36px" color="#191717" align="center">Join the Noom community today!</mj-text>
+            <mj-spacer height="15px"></mj-spacer>
+            <mj-button href="#" target="_blank" font-size="16px" letter-spacing="1.5px" font-family="'Maven Pro', Arial, Helvetica, sans-serif" color="#191717" text-decoration="none" padding="10px 50px" border="2px solid #FB513B" display="inline-block" font-weight="600" border-radius="30px">SIGN UP</mj-button>
+            <mj-spacer height="30px"></mj-spacer>
+          </mj-column>
+        </mj-section>
+      </mj-column>
+    </mj-section>
+  </mj-body>
 </mjml>
