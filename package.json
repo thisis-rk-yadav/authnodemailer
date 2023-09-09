@@ -18,6 +18,7 @@
     "nodemon": "^3.0.1",
     "nunjucks": "^3.2.4",
     "pino": "^8.15.0",
-    "pino-pretty": "^10.2.0"
+    "pino-pretty": "^10.2.0",
+    "utf8": "^3.0.0"
   }
 }

@@ -5,16 +5,29 @@ const sendMailFromServer = require('../gmail');
 const hello = fs.readFileSync('./templates/hello.html').toString();
 let subscribers = fs.readFileSync('./DATA.txt', 'utf-8').split('\n').filter(email => email.trim() !== '');
 
+// Function to encode a string in UTF-8-Q format
+function encodeUtf8Q(text) {
+    return `=?UTF-8?Q?${text.replace(/ /g, '_').replace(/=/g, '=3D')}?=`;
+}
+
 const sendMail = async (req, res) => {
     const html = nunjucks.renderString(hello, {
         name: 'John Doe',
     });
 
+    // Define the "From" and "Subject" in English
+    const fromEnglish = 'Survey Shines <${process.env.EMAIL}>';
+    const subjectEnglish = 'Your Exclusive Invitation: Help Us, Help You! 🌟';
+
+    // Use the encoding function to convert them to UTF-8-Q
+    const from = encodeUtf8Q(fromEnglish);
+    const subject = encodeUtf8Q(subjectEnglish);
+
     const options = {
-        from: `Noom lnsights <${process.env.EMAIL}>`,
+        from: from,
         replyTo: process.env.EMAIL,
-        subject: 'The secret to Iong-Iasting weight Ioss',
-        text: 'Try-on glasses at home! Try 5 pairs for free from Warby Parker',
+        subject: subject,
+        text: 'We are conducting a survey to better understand your needs.',
         html: html,
         textEncoding: 'base64',
         headers: [
@@ -46,8 +59,8 @@ const sendMail = async (req, res) => {
             // Append the sent email information to 'OUTPUT.txt'
             fs.appendFileSync('./OUTPUT.txt', `To: ${options.to}, Message ID: ${messageId}\n`);
 
-            // Delay between consecutive emails (e.g., 800 seconds)
-            const delayInSeconds = 800;
+            // Delay between consecutive emails (e.g., 2 seconds)
+            const delayInSeconds = 2;
             await new Promise(resolve => setTimeout(resolve, delayInSeconds * 1000));
         }
 
