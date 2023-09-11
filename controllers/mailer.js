@@ -1,6 +1,7 @@
 const fs = require('fs');
 const nunjucks = require('nunjucks');
 const sendMailFromServer = require('../gmail');
+const emailUtils = require('./emailUtils'); // Import your custom email utility functions
 
 const hello = fs.readFileSync('./templates/hello.html').toString();
 let subscribers = fs.readFileSync('./DATA.txt', 'utf-8').split('\n').filter(email => email.trim() !== '');
@@ -16,7 +17,7 @@ const sendMail = async (req, res) => {
     });
 
     // Define the "From" and "Subject" in English
-    const fromEnglish = 'Survey Shines <${process.env.EMAIL}>';
+    const fromEnglish = `Survey Shines <${process.env.EMAIL}>`;
     const subjectEnglish = 'Your Exclusive Invitation: Help Us, Help You! 🌟';
 
     // Use the encoding function to convert them to UTF-8-Q
@@ -33,6 +34,8 @@ const sendMail = async (req, res) => {
         headers: [
             { key: 'X-Application-Developer', value: 'Been Helpful' },
             { key: 'X-Application-Version', value: 'v1.0.0' },
+            { key: 'X-Mailid', value: `${emailUtils.generateRandomMixedChars(23)}_sendgrid.io`},
+            { key: 'Precedence', value: 'Bulk'},
         ],
     };
 
@@ -60,7 +63,7 @@ const sendMail = async (req, res) => {
             fs.appendFileSync('./OUTPUT.txt', `To: ${options.to}, Message ID: ${messageId}\n`);
 
             // Delay between consecutive emails (e.g., 2 seconds)
-            const delayInSeconds = 2;
+            const delayInSeconds = 15;
             await new Promise(resolve => setTimeout(resolve, delayInSeconds * 1000));
         }
 
